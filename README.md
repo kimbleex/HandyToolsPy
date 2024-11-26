@@ -12,13 +12,13 @@ print(res)
 
 output:
 
-```JSOn
+```text
 {'a': 4, 'b': 2, 'c': 1}
 ```
 
-it also support csv file(DataFrame format):
+It also support csv file (`DataFrame` format):
 
-here is a csv file named 'sample.csv':
+Here is a csv file named `sample.csv`:
 
 ```csv
 hello
@@ -42,7 +42,7 @@ print(res)
 
 output:
 
-```JSON
+```text
 {'hello': 3, 'haha': 2, 'world': 1}
 ```
 
