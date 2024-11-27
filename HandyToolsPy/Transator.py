@@ -1,21 +1,32 @@
 # -*- coding: utf-8 -*-
-
-from googletrans import Translator
     
-def translator(text: str, dest_lang: str) -> str:
-    """
-    translates text from one language to another.
+from translate import Translator
+from langdetect import detect
+from typing import Optional
 
-    :param text: text to be translated
-    :param dest_lang: output language code (such as 'zh-cn')
-    :return: text translated
+def translator(text: str, target_lang: str = 'en') -> Optional[str]:
     """
-    translator = Translator()
+    Automatically detect the language of the input text and translate it to the target language.
+    
+    :param text: The text to be translated.
+    :type text: str
+    :param target_lang: The language code to translate the text into, default is 'en' (English).
+    :type target_lang: str
+    :return: Translated text or None if translation fails.
+    :rtype: Optional[str]
+    """
     try:
-        # Auto detect the language of the text
-        detected_lang = translator.detect(text).lang
-        translation = translator.translate(text, src=detected_lang, dest=dest_lang)
-        return translation.text
+        # Detect the language of the input text
+        source_lang = detect(text)
+        
+        # Initialize the translator
+        translator = Translator(from_lang=source_lang, to_lang=target_lang)
+        
+        # Translate the text
+        translated_text = translator.translate(text)
+        
+        return translated_text
     except Exception as e:
-        return f"translate_text error: {e}"
+        print(f"Error: {e}")
+        return None
 

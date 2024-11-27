@@ -54,7 +54,7 @@ It can automaticly detect the language of the input text and translate it to the
 from HandyToolsPy import translator
 
 text = "你好"
-res = Translator(text, "en")
+res = translator(text, "en")
 print(res)
 ```
 
