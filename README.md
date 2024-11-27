@@ -1,6 +1,8 @@
 # How to use?
 
-## Calculate the frequency of words
+## 1. Data Process
+
+### 1.1 Calculate the frequency of words
 
 ```python
 from HandyToolsPy import DataProcess as dp
@@ -46,7 +48,7 @@ output:
 {'hello': 3, 'haha': 2, 'world': 1}
 ```
 
-## A Translator
+## 2. A Translator
 
 It can automaticly detect the language of the input text and translate it to the target language.
 
@@ -64,7 +66,7 @@ output:
 'Hello'
 ```
 
-## A Drawer
+## 3. A Drawer
 
 It can draw a BingDunDun.
 
@@ -72,4 +74,28 @@ It can draw a BingDunDun.
 from HandyToolsPy import Draw as dw
 
 dw.draw_BingDunDun(10)
+```
+
+## 4. A Dir Tree Generator
+
+It can generate a dir tree.
+
+```python
+from HandyToolsPy import dir_tree
+
+path = "Sample Path"
+dir_tree.generate_dir_tree(path)
+```
+
+output:
+
+```text
+D:/Sample/
+├── sample.exe
+└── xxx
+    ├── hhh
+    ├── hhh.zip
+    ├── xh.bmp
+    ├── xxx.pptx
+    └── xxx.txt
 ```
