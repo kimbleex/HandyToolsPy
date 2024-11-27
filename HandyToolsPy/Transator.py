@@ -2,7 +2,7 @@
 
 from googletrans import Translator
     
-def Translator(text: str, dest_lang: str) -> str:
+def translator(text: str, dest_lang: str) -> str:
     """
     translates text from one language to another.
 

@@ -9,3 +9,4 @@ dist
 .eggs
 .pypirc
 HandyToolsPy/__pycache__/
+test.py
