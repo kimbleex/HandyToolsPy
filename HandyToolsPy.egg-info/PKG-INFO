@@ -1,0 +1,91 @@
+Metadata-Version: 2.1
+Name: HandyToolsPy
+Version: 0.1.2
+Summary: Handypy is a multifunctional Python tool library, which aims to provide developers with a series of convenient practical tools and simplify daily programming tasks.Whether it is processing data, operating file systems, or network requests, Handypy can provide you with efficient and reliable solutions.
+Home-page: https://github.com/kimbleex/HandyToolsPy
+Author: kimbleex
+Author-email: kimbleex@outlook.com
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas
+Requires-Dist: googletrans
+
+
+# How to use?
+
+## Calculate the frequency of words
+
+```python
+import HandyToolsPy.DataProcess as dp
+
+words = ["a","a","a","a","b","b","c"]
+res = dp.count_words_freq(words)
+print(res)
+```
+
+output:
+
+```text
+{'a': 4, 'b': 2, 'c': 1}
+```
+
+It also support csv file (`DataFrame` format):
+
+Here is a csv file named `sample.csv`:
+
+```csv
+hello
+world
+haha
+haha
+hello
+hello
+```
+
+the code will be:
+
+```python
+import HandyToolsPy.DataProcess as dp
+import pandas as pd
+
+words = pd.read_csv('./sample.csv', names=["word"])
+res = dp.count_words_freq(words["word"])
+print(res)
+```
+
+output:
+
+```text
+{'hello': 3, 'haha': 2, 'world': 1}
+```
+
+## A Translator
+
+It can automaticly detect the language of the input text and translate it to the target language.
+
+```python
+import HandyToolsPy.Translator as tr
+
+text = "你好"
+res = tr.translate_text(text, "en")
+print(res)
+```
+
+output:
+
+```bash
+'Hello'
+```

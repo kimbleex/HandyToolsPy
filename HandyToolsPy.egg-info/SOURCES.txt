@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+HandyToolsPy/DataProcess.py
+HandyToolsPy/Transator.py
+HandyToolsPy/__init__.py
+HandyToolsPy/__version__.py
+HandyToolsPy.egg-info/PKG-INFO
+HandyToolsPy.egg-info/SOURCES.txt
+HandyToolsPy.egg-info/dependency_links.txt
+HandyToolsPy.egg-info/requires.txt
+HandyToolsPy.egg-info/top_level.txt
