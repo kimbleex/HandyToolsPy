@@ -84,7 +84,7 @@ It can generate a dir tree.
 from HandyToolsPy import dir_tree
 
 path = "Sample Path"
-dir_tree.generate_dir_tree(path)
+dir_tree(path)
 ```
 
 output:
