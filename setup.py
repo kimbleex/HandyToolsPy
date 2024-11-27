@@ -18,11 +18,11 @@ URL = 'https://github.com/kimbleex/HandyToolsPy'
 EMAIL = 'kimbleex@outlook.com'
 AUTHOR = 'kimbleex'
 REQUIRES_PYTHON = '>=3.6.0'
-VERSION = '0.1.6'
+VERSION = '0.1.7'
 
 # What packages are required for this module to be executed?
 REQUIRED = [
-    'pandas', 'googletrans',
+    'pandas', 'translate', 'langdetect',
 ]
 
 # What packages are optional?
