@@ -3,7 +3,7 @@
 ## Calculate the frequency of words
 
 ```python
-import HandyToolsPy.DataProcess as dp
+from HandyToolsPy import DataProcess as dp
 
 words = ["a","a","a","a","b","b","c"]
 res = dp.count_words_freq(words)
@@ -51,10 +51,10 @@ output:
 It can automaticly detect the language of the input text and translate it to the target language.
 
 ```python
-import HandyToolsPy.Translator as tr
+from HandyToolsPy import Translator
 
 text = "你好"
-res = tr.translate_text(text, "en")
+res = Translator(text, "en")
 print(res)
 ```
 
@@ -62,4 +62,14 @@ output:
 
 ```bash
 'Hello'
+```
+
+## A Drawer
+
+It can draw a BingDunDun.
+
+```python
+from HandyToolsPy import Draw as dw
+
+dw.draw_BingDunDun(10)
 ```

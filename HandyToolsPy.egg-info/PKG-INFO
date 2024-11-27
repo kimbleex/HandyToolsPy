@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: HandyToolsPy
-Version: 0.1.2
+Version: 0.1.3
 Summary: Handypy is a multifunctional Python tool library, which aims to provide developers with a series of convenient practical tools and simplify daily programming tasks.Whether it is processing data, operating file systems, or network requests, Handypy can provide you with efficient and reliable solutions.
 Home-page: https://github.com/kimbleex/HandyToolsPy
 Author: kimbleex
@@ -29,7 +29,7 @@ Requires-Dist: googletrans
 ## Calculate the frequency of words
 
 ```python
-import HandyToolsPy.DataProcess as dp
+from HandyToolsPy import DataProcess as dp
 
 words = ["a","a","a","a","b","b","c"]
 res = dp.count_words_freq(words)
@@ -77,10 +77,10 @@ output:
 It can automaticly detect the language of the input text and translate it to the target language.
 
 ```python
-import HandyToolsPy.Translator as tr
+from HandyToolsPy import Translator
 
 text = "你好"
-res = tr.translate_text(text, "en")
+res = Translator(text, "en")
 print(res)
 ```
 
@@ -88,4 +88,14 @@ output:
 
 ```bash
 'Hello'
+```
+
+## A Drawer
+
+It can draw a BingDunDun.
+
+```python
+from HandyToolsPy import Draw as dw
+
+dw.draw_BingDunDun(10)
 ```

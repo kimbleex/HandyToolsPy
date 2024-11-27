@@ -2,6 +2,7 @@ LICENSE
 README.md
 setup.py
 HandyToolsPy/DataProcess.py
+HandyToolsPy/Draw.py
 HandyToolsPy/Transator.py
 HandyToolsPy/__init__.py
 HandyToolsPy/__version__.py

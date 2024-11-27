@@ -4,11 +4,9 @@ from collections import Counter
 from pandas import DataFrame
 from typing import Union
 
-class DataProcess():
-    def __init__(self):
-        pass
-    
-    def count_words_freq(self, words : Union[list, DataFrame], sort_methods: str = "DESC") -> dict:
+class DataProcess:
+
+    def count_words_freq(words : Union[list, DataFrame], sort_methods: str = "DESC") -> dict:
         """
         Only One column of DataFrame is allowed
         
