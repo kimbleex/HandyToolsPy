@@ -32,7 +32,7 @@ hello
 the code will be:
 
 ```python
-import HandyToolsPy.DataProcess as dp
+from HandyToolsPy import DataProcess as dp
 import pandas as pd
 
 words = pd.read_csv('./sample.csv', names=["word"])
